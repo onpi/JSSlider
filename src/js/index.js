@@ -1,31 +1,20 @@
+const prev = document.getElementById('prev');
+const next = document.getElementById('next');
+const slider = document.getElementById('slider');
+const sliderArray = document.getElementsByClassName('slider_image');
+let activeIndex = 0;
 
-let list = document.querySelector('#todoList');
-function addTodo(e) {
-  // 追加するテキスト取得
-  let addText = document.getElementById('addText').value;
-  // テキストが入力されているか判定
-  if(addText) {
-    let todoList = document.getElementById('todoList');
-    let listHTML = '';
-    listHTML += `
-    <div class="todo_list">
-      <p class="todo_contents">${ addText }</p>
-      <button type="button" class="delete">-</button>
-    </div>`;
-    // #todoListの閉じタグの前に挿入
-    todoList.insertAdjacentHTML('beforeend', listHTML);
-    // 入力フォームリセット
-    document.getElementById('addText').value = '';
+sliderArray[activeIndex].classList.add('active');
+
+function nextImage(){
+  sliderArray[activeIndex].classList.remove('active');
+  if(activeIndex >= sliderArray.length - 1){
+    activeIndex = 0;
+  }else{
+    activeIndex += 1;  
   }
+  sliderArray[activeIndex].classList.add('active');
 }
-document.querySelector('#add').addEventListener('click', addTodo);
 
-// 削除機能
-function deleteList(e) {
-  if (e.target.classList.contains('delete')){
-    e.target.parentElement.remove();
-  }
-  console.log(e.target.classList);
-}
-list.addEventListener('click', deleteList);
-
+document.querySelector('#prev').addEventListener('click', nextImage);
+document.querySelector('#next').addEventListener('click', nextImage);

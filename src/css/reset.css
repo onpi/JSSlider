@@ -44,7 +44,7 @@ address, caption, cite, code, dfn, em, th, var{
   font-weight: normal;
 }
 
-a,input{
+a,input,button{
   color: #000;
   text-decoration: none;
 	-webkit-transition: 0.3s ease-in-out;
