@@ -1,0 +1,82 @@
+.todo {
+  background-image: linear-gradient(0deg, #aaffa9 10%, #11ffbd 70%);
+  padding: 10%;
+  .todo_wrap {
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 4%;
+    width: 50%;
+  }
+  .todo_logo {
+    text-align: center;
+  }
+  .js_todo {
+    display: flex;
+    flex-direction: column;
+  }
+  .logo_image {
+    margin: 0 auto;
+    width: 10%;
+  }
+  .logo_text {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .todo_list {
+    display: flex;
+    justify-content: space-between;
+    &:not(:first-child) {
+      margin-top: 15px;
+    }
+  }
+  .todo_contents {
+    border: 1px solid #000;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+    width: 90%;
+  }
+  .delete {
+    background-color: red;
+    border-radius: 10px;
+    border: 1px solid red;
+    color: #fff;
+    font-size: 30px;
+    width: 7%;
+    &:hover {
+      background-color: #fff;
+      color: red;
+    }
+  }
+  .todo_add {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .add_text {
+    font-size: 16px;
+    margin: 15px auto;
+    padding: 5px;
+    width: 80%;
+  }
+  .add {
+    background-color: blue;
+    border-radius: 10px;
+    border: 1px solid blue;
+    color: #fff;
+    font-size: 30px;
+    margin: auto;
+    width: 7%;
+    &:hover {
+      background-color: #fff;
+      color: blue;
+    }
+  }
+}
+button {
+  cursor: pointer;
+  &:hover {
+    transition: background .3s;
+  }
+}
