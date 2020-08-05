@@ -6,12 +6,19 @@ let activeIndex = 0;
 
 sliderArray[activeIndex].classList.add('active');
 
-function nextImage(){
+function nextImage(e){
   sliderArray[activeIndex].classList.remove('active');
-  if(activeIndex >= sliderArray.length - 1){
-    activeIndex = 0;
-  }else{
-    activeIndex += 1;  
+  let sliderCount = sliderArray.length;
+  if(e.target.id == 'prev') {
+    activeIndex -= 1;
+    if(activeIndex < 0) {
+      activeIndex = sliderCount - 1;
+    }
+  }else {
+    activeIndex += 1;
+    if(activeIndex > sliderCount - 1) {
+      activeIndex = 0;
+    }
   }
   sliderArray[activeIndex].classList.add('active');
 }
