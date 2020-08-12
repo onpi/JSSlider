@@ -1,0 +1,53 @@
+.slider .slider_image {
+  display: none;
+  margin: 0 auto;
+  max-width: 400px;
+  width: 100%;
+}
+
+.slider .slider_image.active {
+  display: block;
+}
+
+.btn_wrap {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.btn_wrap .button {
+  border: 1px solid #000;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.btn_wrap .button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.dots_wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 15px;
+}
+
+.dots_wrap .dots {
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 20px;
+  margin: 0 5px;
+  width: 20px;
+}
+
+.dots_wrap .dots.active {
+  background-color: #000;
+}
+/*# sourceMappingURL=style.css.map */
